@@ -30,3 +30,17 @@ export OPENSSL_ROOT_DIR=/usr/local/opt/openssl@3
 export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:/usr/local/opt/qt@5
 export PATH=$PATH:/usr/local/opt/qt@5/bin
 ```
+
+# Known Issues 
+## Including `math.h` 
+As reported [here](https://stackoverflow.com/questions/58628377/catalina-c-using-cmath-headers-yield-error-no-member-named-signbit-in-th), there appears to be some sort of fun `cmath` header issue which was "patched" by editting `/Library/Developer/CommandLineTools/usr/include/c++/v1/math.h` and changing the `#include_next <math.h>` to  `#include </usr/local/include/math.h>`. Of course this `/usr/local/include/` is obtained by the previous steps. 
+
+## Issues with `btVector3`
+As reported [here](https://stackoverflow.com/questions/58064487/xcode-11-cocos2dx-compilation-problem-argument-value-10880-is-outside-the-vali), there was an issue when building `bullet` and the fix was done by editting `/usr/local/include/bullet/LinearMath/btVector3.h` and replacing,
+```
+#define BT_SHUFFLE(x,y,z,w) ((w)<<6 | (z)<<4 | (y)<<2 | (x))
+```
+with the new code,
+```
+#define BT_SHUFFLE(x, y, z, w) (((w) << 6 | (z) << 4 | (y) << 2 | (x)) & 0xff)
+```
