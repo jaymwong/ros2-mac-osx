@@ -42,3 +42,4 @@ python -m pip install lark-parser
 python -m pip install numpy
 python -m pip install netifaces
 python -m pip install ifcfg
+python -m pip install pyside2
