@@ -28,4 +28,5 @@ ln -s /usr/local/Cellar/readline/8.2.1 /usr/local/opt/readline
 ln -s /usr/local/Cellar/sqlite/3.42.0 /usr/local/opt/sqlite
 ln -s /usr/local/Cellar/xz/5.4.3 /usr/local/opt/xz
 ln -s /usr/local/opt/cmake\@3.21.4  /usr/local/opt/cmake
+ln -s /usr/local/Cellar/lz4/1.9.4 /usr/local/opt/lz4
 brew install pyside@2
