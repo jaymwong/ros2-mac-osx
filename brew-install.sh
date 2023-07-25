@@ -18,3 +18,13 @@ brew unlink openssl && brew link openssl@3
 brew install tinyxml2
 brew unlink tinyxml2
 brew link --overwrite tinyxml2
+
+# These installs was needed to apply the pyside@2 patch here for rqt_gui 
+# https://github.com/ros-visualization/python_qt_binding/issues/103#issuecomment-1231062249
+brew install readline 
+brew link readline 
+
+ln -s /usr/local/Cellar/readline/8.2.1 /usr/local/opt/readline
+ln -s /usr/local/Cellar/sqlite/3.42.0 /usr/local/opt/sqlite
+ln -s /usr/local/Cellar/xz/5.4.3 /usr/local/opt/xz
+brew install pyside@2
