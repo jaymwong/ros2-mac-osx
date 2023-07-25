@@ -36,6 +36,9 @@ export OPENSSL_ROOT_DIR=/usr/local/opt/openssl@3
 
 export CMAKE_PREFIX_PATH=$CMAKE_PREFIX_PATH:/usr/local/opt/qt@5
 export PATH=$PATH:/usr/local/opt/qt@5/bin
+
+# Force rviz to run in "light theme" since the Foxy default looks bad in dark mode
+defaults write rviz2 NSRequiresAquaSystemAppearance -boolean true
 ```
 
 # Known Issues 
