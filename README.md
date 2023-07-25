@@ -18,7 +18,13 @@ bash pip-install.sh
 bash brew-install.sh
 bash cp-mac-osx-sdk.sh
 ```
-  
+After these updates and patching up some "known issues" (see below), I was able to build with `colcon` 
+```
+mkdir -p ~/ros2_foxy/src; cd ~/ros2_foxy
+vcs import --input https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos src
+COLCON_EXTENSION_BLACKLIST=colcon_core.event_handler.desktop_notification;  colcon build --symlink-install --packages-skip-by-dep python_qt_binding
+```
+
 ## Setting up `~/.bashrc`
 At the end of the day, my `~/.bashrc` looked something like,
 ```
