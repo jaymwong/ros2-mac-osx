@@ -7,7 +7,7 @@ The following OSX versions have been tested,
 ## Instructions
 Follow the steps to get your `/usr/local/` directory working for ROS1 via [ros1-mac-osx](https://github.com/jaymwong/ros1-mac-osx), as these following instructions are based off of that. I'm guessing if I my machine did not have all these ROS1 artifacts it would make the build much easier if I had just followed the advised [ROS2 Foxy instructions](https://docs.ros.org/en/foxy/Installation/Alternatives/macOS-Development-Setup.html). But since Catalina is technically unsupported I went with systematically going through the dependencies myself. 
 
-Anyways, the follow documents what I did, 
+Anyways, the following documents what I did, 
 - Forcefully linked my Python to `3.10` and manually did `pip` installs
 - Fixed the minimal `cmake 3.14` requirement by going to `cmake 3.21.4`
 - Fixed several issues with `openssl` and `tinyxml2`,
