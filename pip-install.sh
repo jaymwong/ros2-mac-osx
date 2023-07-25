@@ -44,3 +44,4 @@ python -m pip install netifaces
 python -m pip install ifcfg
 python -m pip install pyside2
 python -m pip install sip
+python -m pip install PyQt5
